@@ -1,19 +1,15 @@
 [project]
-name = "query-agent"
+name = "liquide-products-api"
 version = "0.1.0"
-description = "Agente text2sql para consultas no banco de e-commerce"
+description = "API intermediária que consulta, normaliza e exporta os produtos da API da Liquide, com sugestões de texto via IA"
 requires-python = ">=3.11,<3.14"
 dependencies = [
-    "langgraph>=0.2",
-    "langchain>=0.3",
     "langchain-core>=0.3",
     "langchain-groq>=0.2",
     "pydantic>=2.9",
     "pydantic-settings>=2.6",
-    "psycopg[binary]>=3.3.5",
-    "langchain-openrouter>=0.2.8",
-    "langfuse>=4.15.4",
     "fastapi>=0.141.1",
     "uvicorn[standard]>=0.54.0",
     "openpyxl>=3.1.5",
+    "httpx>=0.28.1",
 ]
