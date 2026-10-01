@@ -1,0 +1,118 @@
+/* Mobile: cards */
+.cards {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: 1.125rem;
+  overflow-wrap: anywhere;
+}
+
+.cardFacts {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-1) var(--space-3);
+  margin: 0;
+}
+
+.cardFacts dt {
+  color: var(--color-muted);
+  font-size: 0.875rem;
+}
+
+.cardFacts dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.cardButton {
+  width: 100%;
+}
+
+/* Desktop: tabela */
+.tableWrapper {
+  display: none;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+@media (min-width: 640px) {
+  .cards {
+    display: none;
+  }
+
+  .tableWrapper {
+    display: block;
+  }
+}
+
+.table th {
+  background: var(--color-gray-200);
+  font-size: 0.875rem;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.table tbody tr:hover {
+  background: var(--color-green-tint);
+}
+
+.ean {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.875rem;
+  white-space: nowrap;
+}
+
+.price {
+  text-align: right;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.unavailable {
+  color: var(--color-muted);
+  font-weight: 400;
+}
+
+.warning {
+  display: block;
+  width: fit-content;
+  margin-top: var(--space-1);
+  padding: 0 var(--space-2);
+  border-left: 3px solid var(--color-warning-accent);
+  border-radius: 4px;
+  font-size: 0.75rem;
+  background: var(--color-warning-bg);
+  color: var(--color-warning-text);
+  cursor: help;
+}
+
+.price .warning {
+  margin-left: auto;
+}
+
+.action {
+  text-align: right;
+  width: 1%;
+}

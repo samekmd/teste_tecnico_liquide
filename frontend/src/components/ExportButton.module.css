@@ -1,0 +1,57 @@
+.export {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.button {
+  width: 100%;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+/* Ação principal: verde com texto marinho (7:1); texto branco no verde não teria contraste. */
+.primary {
+  border-color: var(--color-accent);
+  background: var(--color-accent);
+  color: var(--color-navy);
+}
+
+.primary:hover:not(:disabled) {
+  border-color: var(--color-green-dark);
+  background: var(--color-green-dark);
+  color: var(--color-surface);
+}
+
+.secondary {
+  border-color: var(--color-primary);
+  background: var(--color-surface);
+  color: var(--color-primary);
+}
+
+.secondary:hover:not(:disabled) {
+  background: var(--color-bg);
+}
+
+.error {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--color-danger);
+}
+
+@media (min-width: 640px) {
+  .button {
+    width: auto;
+  }
+
+  /* No desktop a mensagem fica sob o botão sem desalinhar a busca ao lado. */
+  .error {
+    position: absolute;
+    top: calc(100% + var(--space-1));
+    right: 0;
+    width: max-content;
+    max-width: 320px;
+    text-align: right;
+  }
+}

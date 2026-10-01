@@ -1,0 +1,16 @@
+.search {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  flex: 1;
+}
+
+.search label {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.search input {
+  width: 100%;
+  background: var(--color-surface);
+}
